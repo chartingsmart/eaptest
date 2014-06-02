@@ -95,21 +95,21 @@ public class UploadServlet extends HttpServlet {
                 out.println("<p><pre>Field Name : " + fieldName + "</pre>");
                 out.println("<p><pre>Content Type : " + contentType + "</pre>");
                 out.println("<p><pre>Size : " + size + "</pre>");
-                if (!item.isFormField()) {
-                    // Transform the input.
-                    String input = fromStream(item.getInputStream());
-                    String output = input;
+                if (item.isFormField()) {
+                    String input = item.getString();
 
-                    // Show the input jPDL.
-                    out.println("<p><h2>Input :</h2></p>");
+                    // Show the input.
+                    out.println("<p><h2>Field Contents :</h2></p>");
                     out.println("<textarea rows=\"20\" cols=\"150\">");
                     out.println("<pre>" + StringEscapeUtils.escapeHtml(input) + "</pre>");
                     out.println("</textarea>");
+                } else {
+                    String input = fromStream(item.getInputStream());
 
-                    // Show the final output BPMN2.
-                    out.println("<p><h2>Output:</h2></p>");
+                    // Show the input.
+                    out.println("<p><h2>File Contents :</h2></p>");
                     out.println("<textarea rows=\"20\" cols=\"150\">");
-                    out.println("<pre>" + StringEscapeUtils.escapeHtml(output) + "</pre>");
+                    out.println("<pre>" + StringEscapeUtils.escapeHtml(input) + "</pre>");
                     out.println("</textarea>");
                 }
             }

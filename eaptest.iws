@@ -62,7 +62,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="41" selection-start="2220" selection-end="2220" vertical-scroll-proportion="-6.76">
+            <state line="58" column="41" selection-start="2220" selection-end="2220" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -71,7 +71,25 @@
       <file leaf-file-name="UploadServlet.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="69" selection-start="4090" selection-end="4090" vertical-scroll-proportion="0.502457">
+            <state line="117" column="45" selection-start="4911" selection-end="4911" vertical-scroll-proportion="0.9106079">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/input.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="141" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="snoop.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/snoop.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -110,6 +128,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/input.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java" />
       </list>
     </option>
@@ -556,13 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/snoop.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="24" selection-start="801" selection-end="801" vertical-scroll-proportion="0.4791155">
@@ -586,7 +598,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="41" selection-start="2220" selection-end="2220" vertical-scroll-proportion="-6.76">
+        <state line="58" column="41" selection-start="2220" selection-end="2220" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -612,9 +624,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/snoop.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/health.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="54" selection-start="2" selection-end="2" vertical-scroll-proportion="0.017878426">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/input.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="141" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="69" selection-start="4090" selection-end="4090" vertical-scroll-proportion="0.502457">
+        <state line="117" column="45" selection-start="4911" selection-end="4911" vertical-scroll-proportion="0.9106079">
           <folding />
         </state>
       </provider>
