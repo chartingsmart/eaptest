@@ -33,9 +33,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 
 @WebServlet(name = "UploadServlet", urlPatterns = {"/upload"})
@@ -45,6 +48,8 @@ public class UploadServlet extends HttpServlet {
 
     @Inject
     private Logger log;
+
+    private static ConcurrentHashMap<String, String> filedata = new ConcurrentHashMap();
 
     private static String fromStream(InputStream is) {
         Scanner s = new Scanner(is).useDelimiter("\\A");
@@ -93,37 +98,61 @@ public class UploadServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<div style=\"text-align: center;\">");
+            // we look for a filename item and/or file item with file content
             Iterator<FileItem> iter = items.iterator();
+            String filename = null;
+            String contents = null;
             while (iter.hasNext()) {
                 FileItem item = iter.next();
-                if (!item.isFormField()) {
-                    String name = item.getName();
-                    out.println("<p><pre>Name : " + name + "</pre>");
-                }
-                String contentType = item.getContentType();
+                boolean isFormField = item.isFormField();
                 String fieldName = item.getFieldName();
-                long size = item.getSize();
-                out.println("<p><pre>Field Name : " + fieldName + "</pre>");
-                out.println("<p><pre>Content Type : " + contentType + "</pre>");
-                out.println("<p><pre>Size : " + size + "</pre>");
-                if (item.isFormField()) {
-                    String input = item.getString();
-
-                    // Show the input.
-                    out.println("<p><h2>Field Contents :</h2></p>");
-                    out.println("<textarea rows=\"3\" cols=\"150\">");
-                    out.println(StringEscapeUtils.escapeHtml(input));
-                    out.println("</textarea>");
+                if (isFormField && fieldName.equals("filename")) {
+                    filename = fieldName;
+                } else if (!isFormField && !fieldName.equals("file")) {
+                    contents = fromStream(item.getInputStream());
                 } else {
-                    String input = fromStream(item.getInputStream());
-
-                    // Show the input.
-                    out.println("<p><h2>File Contents :</h2></p>");
-                    out.println("<textarea rows=\"20\" cols=\"150\">");
-                    out.println(StringEscapeUtils.escapeHtml(input));
-                    out.println("</textarea>");
+                    if (isFormField) {
+                        out.println("<p><pre>Unexpected field value : " + fieldName + "</pre>");
+                    } else {
+                        String name = item.getName();
+                        out.println("<p><pre>Unexpected file value : " + name + " for field " + fieldName + "</pre>");
+                    }
+                    out.println("</body>");
+                    out.println("</html>");
+                    return;
                 }
             }
+
+            // if we don't have a filename then list all files in the hashtable
+
+            if (filename == null) {
+                Set<String> keys = filedata.keySet();
+                out.println("Keys:<br/>");
+                out.println("<pre>");
+                for (String key : keys) {
+                    out.println(key);
+                }
+                out.println("</pre>");
+                out.println("</body>");
+                out.println("</html>");
+                return;
+            }
+            // if we have a filename and no contents then we
+            // retrieve the file contents from the hashmap
+            // if we have a filename and contents then we update
+            // the hashmap
+
+            if (contents == null) {
+                contents = filedata.get(filename);
+            } else {
+                filedata.put(filename, contents);
+            }
+
+            // now hand the contents back
+            iter = items.iterator();
+            out.println("<pre>");
+            out.println(contents);
+            out.println("</pre>");
             out.println("</body>");
             out.println("</html>");
         } catch (FileUploadException fuEx) {

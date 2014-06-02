@@ -19,7 +19,7 @@ Select a file to upload:
 <form action="upload" method="post" enctype="multipart/form-data">
 	<h3>Select file: </h3><input type="file" name="file" size="50" />
 	<br/>
-	<h3>Enter text: </h3><input type="text/ascii" name="text" size="50" />
+	<h3>name: </h3><input type="text/ascii" name="filename" size="50" />
 	<br/><p/>
 	<input type="submit" value="Upload File" />
 </form>
