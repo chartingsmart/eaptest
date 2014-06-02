@@ -68,19 +68,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadServlet.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UploadServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="67" selection-start="4277" selection-end="4277" vertical-scroll-proportion="0.6603099">
+            <state line="103" column="67" selection-start="4277" selection-end="4277" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="input.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="input.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/input.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="36" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
+            <state line="28" column="36" selection-start="687" selection-end="687" vertical-scroll-proportion="0.5084746">
               <folding />
             </state>
           </provider>
@@ -128,8 +128,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/input.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/input.jsp" />
       </list>
     </option>
   </component>
@@ -638,16 +638,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/input.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="36" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
+        <state line="103" column="67" selection-start="4277" selection-end="4277" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/input.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="67" selection-start="4277" selection-end="4277" vertical-scroll-proportion="0.6603099">
+        <state line="28" column="36" selection-start="687" selection-end="687" vertical-scroll-proportion="0.5084746">
           <folding />
         </state>
       </provider>
