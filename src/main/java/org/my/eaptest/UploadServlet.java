@@ -101,7 +101,7 @@ public class UploadServlet extends HttpServlet {
                     // Show the input.
                     out.println("<p><h2>Field Contents :</h2></p>");
                     out.println("<textarea rows=\"20\" cols=\"150\">");
-                    out.println("<pre>" + StringEscapeUtils.escapeHtml(input) + "</pre>");
+                    out.println(StringEscapeUtils.escapeHtml(input));
                     out.println("</textarea>");
                 } else {
                     String input = fromStream(item.getInputStream());
@@ -109,7 +109,7 @@ public class UploadServlet extends HttpServlet {
                     // Show the input.
                     out.println("<p><h2>File Contents :</h2></p>");
                     out.println("<textarea rows=\"20\" cols=\"150\">");
-                    out.println("<pre>" + StringEscapeUtils.escapeHtml(input) + "</pre>");
+                    out.println(StringEscapeUtils.escapeHtml(input));
                     out.println("</textarea>");
                 }
             }

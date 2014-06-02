@@ -71,7 +71,7 @@
       <file leaf-file-name="UploadServlet.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="45" selection-start="4911" selection-end="4911" vertical-scroll-proportion="0.9106079">
+            <state line="103" column="67" selection-start="4277" selection-end="4277" vertical-scroll-proportion="0.6603099">
               <folding />
             </state>
           </provider>
@@ -80,7 +80,7 @@
       <file leaf-file-name="input.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/input.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="141" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
+            <state line="28" column="36" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -640,14 +640,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/input.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="141" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
+        <state line="28" column="36" selection-start="644" selection-end="644" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="45" selection-start="4911" selection-end="4911" vertical-scroll-proportion="0.9106079">
+        <state line="103" column="67" selection-start="4277" selection-end="4277" vertical-scroll-proportion="0.6603099">
           <folding />
         </state>
       </provider>
