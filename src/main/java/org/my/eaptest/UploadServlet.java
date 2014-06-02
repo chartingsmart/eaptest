@@ -108,7 +108,7 @@ public class UploadServlet extends HttpServlet {
                 String fieldName = item.getFieldName();
                 if (isFormField && fieldName.equals("filename")) {
                     filename = fieldName;
-                } else if (!isFormField && !fieldName.equals("file")) {
+                } else if (!isFormField && fieldName.equals("file")) {
                     contents = fromStream(item.getInputStream());
                 } else {
                     if (isFormField) {
