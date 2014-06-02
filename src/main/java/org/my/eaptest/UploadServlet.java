@@ -108,8 +108,11 @@ public class UploadServlet extends HttpServlet {
                 String fieldName = item.getFieldName();
                 if (isFormField && fieldName.equals("filename")) {
                     filename = item.getString();
+                } else if (isFormField && fieldName.equals("readonly")) {
+                    // means no filename or file provided
                 } else if (!isFormField && fieldName.equals("file")) {
                     contents = fromStream(item.getInputStream());
+                    contents = StringEscapeUtils.escapeHtml(contents);
                 } else {
                     if (isFormField) {
                         out.println("<p><pre>Unexpected field value : " + fieldName + "</pre>");
