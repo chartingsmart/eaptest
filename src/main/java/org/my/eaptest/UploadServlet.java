@@ -85,15 +85,19 @@ public class UploadServlet extends HttpServlet {
             Iterator<FileItem> iter = items.iterator();
             while (iter.hasNext()) {
                 FileItem item = iter.next();
+                if (!item.isFormField()) {
+                    String name = item.getName();
+                    out.println("<p><pre>Name : " + name + "</pre>");
+                }
                 String contentType = item.getContentType();
-                String fieldName = fromStream(item.getInputStream());
+                String fieldName = item.getFieldName();
                 long size = item.getSize();
-                out.println("<p><pre>Field Name : " + fieldName + "</pre><br/>");
-                out.println("<p><pre>Content Type : " + contentType + "</pre><br/>");
-                out.println("<p><pre>Size : " + size + "</pre><br/>");
+                out.println("<p><pre>Field Name : " + fieldName + "</pre>");
+                out.println("<p><pre>Content Type : " + contentType + "</pre>");
+                out.println("<p><pre>Size : " + size + "</pre>");
                 if (!item.isFormField()) {
                     // Transform the input.
-                    String input = item.toString();
+                    String input = fromStream(item.getInputStream());
                     String output = input;
 
                     // Show the input jPDL.
