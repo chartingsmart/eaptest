@@ -68,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadServlet.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="UploadServlet.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="25" selection-start="6292" selection-end="6292" vertical-scroll-proportion="0.0">
+            <state line="109" column="47" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.25650558">
               <folding />
             </state>
           </provider>
@@ -104,10 +104,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="input.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="input.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/input.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="22" selection-start="702" selection-end="702" vertical-scroll-proportion="0.5204461">
+            <state line="28" column="22" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,15 +126,6 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="210" column="138" selection-start="36355" selection-end="36355" vertical-scroll-proportion="-105.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServletFileUpload.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3/commons-fileupload-1.3-sources.jar!/org/apache/commons/fileupload/servlet/ServletFileUpload.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="2" selection-start="0" selection-end="3" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -169,8 +160,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/my/eaptest/Resources.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/input.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java" />
       </list>
     </option>
   </component>
@@ -717,13 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="138" selection-start="36355" selection-end="36355" vertical-scroll-proportion="-105.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/Resources.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="0" selection-end="578" vertical-scroll-proportion="0.0">
@@ -738,13 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3/commons-fileupload-1.3-sources.jar!/org/apache/commons/fileupload/servlet/ServletFileUpload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="2" selection-start="0" selection-end="3" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.7.0/src.zip!/java/util/concurrent/ConcurrentHashMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1214" column="25" selection-start="47913" selection-end="47913" vertical-scroll-proportion="0.0">
@@ -752,16 +729,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/input.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="25" selection-start="6292" selection-end="6292" vertical-scroll-proportion="0.0">
+        <state line="28" column="22" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/input.jsp">
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3/commons-fileupload-1.3-sources.jar!/org/apache/commons/fileupload/servlet/ServletFileUpload.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="22" selection-start="702" selection-end="702" vertical-scroll-proportion="0.5204461">
+        <state line="0" column="2" selection-start="0" selection-end="3" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="210" column="138" selection-start="36355" selection-end="36355" vertical-scroll-proportion="-105.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="47" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.25650558">
           <folding />
         </state>
       </provider>
