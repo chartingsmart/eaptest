@@ -100,7 +100,7 @@ public class UploadServlet extends HttpServlet {
 
                     // Show the input.
                     out.println("<p><h2>Field Contents :</h2></p>");
-                    out.println("<textarea rows=\"20\" cols=\"150\">");
+                    out.println("<textarea rows=\"3\" cols=\"150\">");
                     out.println(StringEscapeUtils.escapeHtml(input));
                     out.println("</textarea>");
                 } else {

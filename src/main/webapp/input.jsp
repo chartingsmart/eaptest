@@ -11,7 +11,7 @@
 
 <hr>                    
 
-<h4>Upload jBPM 3.2 Process Definition:</h4>
+<h4>Upload a file and some field data:</h4>
 This site allows you to test the JBoss EAP Server
 <br/>
 <br/>

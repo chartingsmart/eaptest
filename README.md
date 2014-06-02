@@ -1,3 +1,3 @@
-The OpenShift `jbosseap` cartridge documentation can be found at:
+Simple web app used to test jboss eap from the command line.
 
-https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-jbosseap/README.md
+Thanks to Eric Schabell for providing an initial app from twhich this was cloned.

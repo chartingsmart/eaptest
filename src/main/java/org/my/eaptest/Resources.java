@@ -11,20 +11,10 @@
  */
 package org.my.eaptest;
 
-import org.apache.commons.lang.time.DateUtils;
 import org.apache.log4j.Logger;
 
 import javax.enterprise.inject.Produces;
 import javax.enterprise.inject.spi.InjectionPoint;
-import javax.inject.Qualifier;
-import java.io.IOException;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-import java.util.Date;
-import java.util.Properties;
-import java.util.TimeZone;
 
 /**
  * This class uses CDI to alias Java EE resources, such as the persistence context, to CDI beans.
