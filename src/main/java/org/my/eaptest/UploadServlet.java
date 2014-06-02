@@ -150,6 +150,9 @@ public class UploadServlet extends HttpServlet {
 
             // now hand the contents back
             iter = items.iterator();
+            out.println("<pre>File: ");
+            out.println(filename);
+            out.println("</pre><br/>");
             out.println("<pre>");
             out.println(contents);
             out.println("</pre>");
