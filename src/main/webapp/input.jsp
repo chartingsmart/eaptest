@@ -20,7 +20,7 @@ Select a file to upload:
 	<h3>Select file: </h3><input type="file" name="file" size="50" />
 	<br/>
 	<h3>Enter text: </h3><input type="text/ascii" name="text" size="50" />
-	<br/>
+	<br/><p/>
 	<input type="submit" value="Upload File" />
 </form>
 
