@@ -71,7 +71,7 @@
       <file leaf-file-name="UploadServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="173" column="2" selection-start="7175" selection-end="7175" vertical-scroll-proportion="0.0">
+            <state line="112" column="60" selection-start="4683" selection-end="4683" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,7 +107,7 @@
       <file leaf-file-name="input.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/input.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="11" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.9085366">
+            <state line="40" column="41" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.6219512">
               <folding />
             </state>
           </provider>
@@ -727,14 +727,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="2" selection-start="7175" selection-end="7175" vertical-scroll-proportion="0.0">
+        <state line="112" column="60" selection-start="4683" selection-end="4683" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/input.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="11" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.9085366">
+        <state line="40" column="41" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.6219512">
           <folding />
         </state>
       </provider>
