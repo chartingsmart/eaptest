@@ -21,8 +21,10 @@ Select a file to upload:
 	<br/><p/>
 	<h3>Select contents: </h3><input type="file" name="file" size="50" />
 	<br/><p/>
-	<input type="submit" value="Upload File" />
+	<input type="submit" value="Update File" />
 </form>
+
+<hr>
 
 <form action="upload" method="post" enctype="multipart/form-data">
 	<h3>Enter name: </h3><input type="text/ascii" name="filename" size="50" />
@@ -30,16 +32,29 @@ Select a file to upload:
 	<input type="submit" value="Show File" />
 </form>
 
+<hr>
+
+<form action="upload" method="post" enctype="multipart/form-data">
+	<h3>Enter name: </h3><input type="text/ascii" name="filename" size="50" />
+    <input type="text/ascii" name="delete" size="50" />
+	<br/><p/>
+	<input type="submit" value="Delete File" />
+</form>
+
+<hr>
+
 <form action="upload" method="post" enctype="multipart/form-data">
 	<input type="text/ascii" name="readonly" size="50" />
 	<br/><p/>
 	<input type="submit" value="List All" />
 </form>
 
+<hr>
+
 <form action="upload" method="post" enctype="multipart/form-data">
 	<input type="text/ascii" name="delete" size="50" />
 	<br/><p/>
-	<input type="submit" value="List All" />
+	<input type="submit" value="Delete All" />
 </form>
 
 </body>
