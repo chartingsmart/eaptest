@@ -135,10 +135,10 @@ public class UploadServlet extends HttpServlet {
             if (filename == null) {
                 if (delete) {
                     filedata.clear();
-                    out.println("All keys deleted!<br/>");
+                    out.println("All files deleted!<br/>");
                 } else {
                     Set<String> keys = filedata.keySet();
-                    out.println("Keys:<br/>");
+                    out.println("All files:<br/>");
                     out.println("<pre>");
                     for (String key : keys) {
                         out.println(key);
@@ -156,7 +156,8 @@ public class UploadServlet extends HttpServlet {
             // the hashmap -- delete should not be supplied in
             // this case
 
-            if (contents == null) {
+            boolean noUpdate = (contents == null);
+            if (noUpdate) {
                 if (delete) {
                     contents = filedata.remove(filename);
                 } else {
@@ -170,7 +171,7 @@ public class UploadServlet extends HttpServlet {
             iter = items.iterator();
             out.println("<pre>File: ");
             out.println(filename);
-            if (delete && contents == null) {
+            if (noUpdate && delete) {
                 out.println(" deleted");
             }
             out.println("</pre><br/>");
