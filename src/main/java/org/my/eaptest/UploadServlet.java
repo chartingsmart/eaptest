@@ -125,10 +125,16 @@ public class UploadServlet extends HttpServlet {
                     }
                 } else {
                     if (isFormField) {
-                        out.println("<p><pre>Unexpected field name : " + fieldName + "</pre>");
+                        out.print("<p><pre>Unexpected field name : ");
+                        out.print(fieldName);
+                        out.println("</pre>");
                     } else {
                         String name = item.getName();
-                        out.println("<p><pre>Unexpected file item : " + name + " for field " + fieldName + "</pre>");
+                        out.print("<p><pre>Unexpected file item : ");
+                        out.print(name);
+                        out.print(" for field ");
+                        out.print(fieldName);
+                        out.println("</pre>");
                     }
                     out.println("</body>");
                     out.println("</html>");
@@ -179,21 +185,21 @@ public class UploadServlet extends HttpServlet {
 
             // now hand the contents back
             iter = items.iterator();
-            out.println("<pre>File: ");
-            out.println(filename);
+            out.print("<pre>File: ");
+            out.print(filename);
             boolean printContents = true;
             if (noUpdate) {
                 if (contents == null) {
                     out.println(" not found");
                     printContents = false;
                 } else if (delete) {
-                    out.println(" deleted");
+                    out.print(" deleted");
                 }
             } else {
                 if (contents == null) {
-                    out.println(" added");
+                    out.print(" added");
                 } else {
-                    out.println(" updated");
+                    out.print(" updated");
                 }
             }
             out.println("</pre><br/>");
