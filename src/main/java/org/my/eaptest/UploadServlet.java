@@ -197,9 +197,11 @@ public class UploadServlet extends HttpServlet {
                 }
             }
             out.println("</pre><br/>");
-            out.println("<pre>");
-            out.println(contents);
-            out.println("</pre>");
+            if (printContents) {
+                out.println("<pre>");
+                out.println(contents);
+                out.println("</pre>");
+            }
             out.println("</body>");
             out.println("</html>");
         } catch (FileUploadException fuEx) {
