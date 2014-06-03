@@ -17,9 +17,9 @@ This site allows you to test the JBoss EAP Server
 <h4>Upload a named file:</h4>
 Select a file to upload:
 <form action="upload" method="post" enctype="multipart/form-data">
-	<h3>Enter name: </h3><input type="text/ascii" name="filename" size="50" />
+	<h3>Select file: </h3><input type="file" name="file" size="50" />
 	<br/><p/>
-	<h3>Select contents: </h3><input type="file" name="file" size="50" />
+	<h3>Enter alternative name (optional): </h3><input type="text/ascii" name="filename" size="50" />
 	<br/><p/>
 	<input type="submit" value="Upload File" />
 </form>
