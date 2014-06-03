@@ -113,6 +113,7 @@ public class UploadServlet extends HttpServlet {
                     // means no filename or file provided
                 } else if (isFormField && fieldName.equals("delete")) {
                     // delete one or all fiels depending on whether filename is provided
+                    delete = true;
                 } else if (!isFormField && fieldName.equals("file")) {
                     contents = fromStream(item.getInputStream());
                     contents = StringEscapeUtils.escapeHtml(contents);
