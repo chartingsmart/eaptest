@@ -125,10 +125,10 @@ public class UploadServlet extends HttpServlet {
                     }
                 } else {
                     if (isFormField) {
-                        out.println("<p><pre>Unexpected field value : " + fieldName + "</pre>");
+                        out.println("<p><pre>Unexpected field name : " + fieldName + "</pre>");
                     } else {
                         String name = item.getName();
-                        out.println("<p><pre>Unexpected file value : " + name + " for field " + fieldName + "</pre>");
+                        out.println("<p><pre>Unexpected file item : " + name + " for field " + fieldName + "</pre>");
                     }
                     out.println("</body>");
                     out.println("</html>");
@@ -146,8 +146,12 @@ public class UploadServlet extends HttpServlet {
                     Set<String> keys = filedata.keySet();
                     out.println("All files:<br/>");
                     out.println("<pre>");
-                    for (String key : keys) {
-                        out.println(key);
+                    if (keys.isEmpty()) {
+                        out.println("No files found!");
+                    } else {
+                        for (String key : keys) {
+                            out.println(key);
+                        }
                     }
                     out.println("</pre>");
                 }
@@ -170,15 +174,27 @@ public class UploadServlet extends HttpServlet {
                     contents = filedata.get(filename);
                 }
             } else {
-                filedata.put(filename, contents);
+                contents = filedata.put(filename, contents);
             }
 
             // now hand the contents back
             iter = items.iterator();
             out.println("<pre>File: ");
             out.println(filename);
-            if (noUpdate && delete) {
-                out.println(" deleted");
+            boolean printContents = true;
+            if (noUpdate) {
+                if (contents == null) {
+                    out.println(" not found");
+                    printContents = false;
+                } else if (delete) {
+                    out.println(" deleted");
+                }
+            } else {
+                if (contents == null) {
+                    out.println(" added");
+                } else {
+                    out.println(" updated");
+                }
             }
             out.println("</pre><br/>");
             out.println("<pre>");
