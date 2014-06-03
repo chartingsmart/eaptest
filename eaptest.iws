@@ -59,19 +59,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="41" selection-start="2220" selection-end="2220" vertical-scroll-proportion="0.0">
+            <state line="58" column="41" selection-start="2220" selection-end="2220" vertical-scroll-proportion="0.56707317">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadServlet.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="UploadServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="31" selection-start="4816" selection-end="4816" vertical-scroll-proportion="1.5947956">
+            <state line="52" column="25" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,7 +107,7 @@
       <file leaf-file-name="input.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/input.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="22" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
+            <state line="28" column="13" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -125,7 +125,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="210" column="138" selection-start="36355" selection-end="36355" vertical-scroll-proportion="-105.75">
+            <state line="212" column="138" selection-start="36489" selection-end="36579" vertical-scroll-proportion="-1.875">
               <folding />
             </state>
           </provider>
@@ -205,9 +205,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -404,6 +403,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -418,9 +418,9 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -432,19 +432,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-        <option name="PhingTarget" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
       <module name="" />
       <setting name="path" value="" />
@@ -456,6 +443,19 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
         <option name="PhingTarget" enabled="false" />
       </method>
@@ -588,7 +588,7 @@
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="ToolWindowManager">
-    <frame x="260" y="70" width="1453" height="978" extended-state="0" />
+    <frame x="254" y="62" width="1453" height="978" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -661,98 +661,78 @@
   <component name="editorHistoryManager">
     <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3/commons-fileupload-1.3.jar!/org/apache/commons/fileupload/FileItem.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="171" selection-end="171" vertical-scroll-proportion="0.08813161">
-          <folding />
-        </state>
+        <state line="5" column="17" selection-start="171" selection-end="171" vertical-scroll-proportion="0.08813161" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3/commons-fileupload-1.3-sources.jar!/org/apache/commons/fileupload/FileItemHeadersSupport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="17" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.5172825">
-          <folding />
-        </state>
+        <state line="29" column="17" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.5172825" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3/commons-fileupload-1.3-sources.jar!/org/apache/commons/fileupload/FileItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="70" selection-start="1959" selection-end="1959" vertical-scroll-proportion="0.7330155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="60" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/health.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="54" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="41" column="70" selection-start="1959" selection-end="1959" vertical-scroll-proportion="0.7330155" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/snoop.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.28301886">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.28301886" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/Resources.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3/commons-fileupload-1.3-sources.jar!/org/apache/commons/fileupload/servlet/ServletFileUpload.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="0" selection-end="578" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="41" selection-start="2220" selection-end="2220" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="2" selection-start="0" selection-end="3" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar:///usr/lib/jvm/java-1.7.0/src.zip!/java/util/concurrent/ConcurrentHashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1214" column="25" selection-start="47913" selection-end="47913" vertical-scroll-proportion="0.0">
+        <state line="1214" column="25" selection-start="47913" selection-end="47913" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/health.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="54" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="60" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/Resources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="0" selection-end="578" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="212" column="138" selection-start="36489" selection-end="36579" vertical-scroll-proportion="-1.875">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/input.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="22" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3/commons-fileupload-1.3-sources.jar!/org/apache/commons/fileupload/servlet/ServletFileUpload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="2" selection-start="0" selection-end="3" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="138" selection-start="36355" selection-end="36355" vertical-scroll-proportion="-105.75">
+        <state line="28" column="13" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="31" selection-start="4816" selection-end="4816" vertical-scroll-proportion="1.5947956">
+        <state line="52" column="25" selection-start="1853" selection-end="1853" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="41" selection-start="2220" selection-end="2220" vertical-scroll-proportion="0.56707317">
           <folding />
         </state>
       </provider>
