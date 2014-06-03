@@ -11,11 +11,11 @@
 
 <hr>                    
 
-<h4>Upload a file and some field data:</h4>
 This site allows you to test the JBoss EAP Server
 <br/>
 <br/>
-Select a file to upload: 
+<h4>Upload a named file:</h4>
+Select a file to upload:
 <form action="upload" method="post" enctype="multipart/form-data">
 	<h3>Enter name: </h3><input type="text/ascii" name="filename" size="50" />
 	<br/><p/>
@@ -26,6 +26,7 @@ Select a file to upload:
 
 <hr>
 
+<h4>Show a named file:</h4>
 <form action="upload" method="post" enctype="multipart/form-data">
 	<h3>Enter name: </h3><input type="text/ascii" name="filename" size="50" />
 	<br/><p/>
@@ -34,6 +35,7 @@ Select a file to upload:
 
 <hr>
 
+<h4>Delete a named file:</h4>
 <form action="upload" method="post" enctype="multipart/form-data">
 	<h3>Enter name: </h3><input type="text/ascii" name="filename" size="50" />
     <input type="text/ascii" name="delete" size="50" />
@@ -43,6 +45,7 @@ Select a file to upload:
 
 <hr>
 
+<h4>List all uploaded files:</h4>
 <form action="upload" method="post" enctype="multipart/form-data">
 	<input type="text/ascii" name="readonly" size="50" />
 	<br/><p/>
@@ -51,6 +54,7 @@ Select a file to upload:
 
 <hr>
 
+<h4>Delete all uploaded files:</h4>
 <form action="upload" method="post" enctype="multipart/form-data">
 	<input type="text/ascii" name="delete" size="50" />
 	<br/><p/>
