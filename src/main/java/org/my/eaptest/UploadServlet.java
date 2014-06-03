@@ -97,7 +97,7 @@ public class UploadServlet extends HttpServlet {
             out.println("<title>Servlet upload</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<div style=\"text-align: center;\">");
+            out.println("<div style=\"text-align: left;\">");
             // we look for a filename item and/or file item with file content
             Iterator<FileItem> iter = items.iterator();
             String filename = null;
