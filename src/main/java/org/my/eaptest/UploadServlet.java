@@ -102,6 +102,7 @@ public class UploadServlet extends HttpServlet {
             Iterator<FileItem> iter = items.iterator();
             String filename = null;
             String contents = null;
+            boolean delete = false;
             while (iter.hasNext()) {
                 FileItem item = iter.next();
                 boolean isFormField = item.isFormField();
@@ -110,6 +111,8 @@ public class UploadServlet extends HttpServlet {
                     filename = item.getString();
                 } else if (isFormField && fieldName.equals("readonly")) {
                     // means no filename or file provided
+                } else if (isFormField && fieldName.equals("delete")) {
+                    // delete one or all fiels depending on whether filename is provided
                 } else if (!isFormField && fieldName.equals("file")) {
                     contents = fromStream(item.getInputStream());
                     contents = StringEscapeUtils.escapeHtml(contents);
@@ -126,27 +129,38 @@ public class UploadServlet extends HttpServlet {
                 }
             }
 
-            // if we don't have a filename then list all files in the hashtable
+            // if we don't have a filename then either list or delete all files in the hashtable
 
             if (filename == null) {
-                Set<String> keys = filedata.keySet();
-                out.println("Keys:<br/>");
-                out.println("<pre>");
-                for (String key : keys) {
-                    out.println(key);
+                if (delete) {
+                    filedata.clear();
+                    out.println("All keys deleted!<br/>");
+                } else {
+                    Set<String> keys = filedata.keySet();
+                    out.println("Keys:<br/>");
+                    out.println("<pre>");
+                    for (String key : keys) {
+                        out.println(key);
+                    }
+                    out.println("</pre>");
                 }
-                out.println("</pre>");
                 out.println("</body>");
                 out.println("</html>");
                 return;
             }
             // if we have a filename and no contents then we
             // retrieve the file contents from the hashmap
+            // and maybe delete the file
             // if we have a filename and contents then we update
-            // the hashmap
+            // the hashmap -- delete should not be supplied in
+            // this case
 
             if (contents == null) {
-                contents = filedata.get(filename);
+                if (delete) {
+                    contents = filedata.remove(filename);
+                } else {
+                    contents = filedata.get(filename);
+                }
             } else {
                 filedata.put(filename, contents);
             }
@@ -155,6 +169,9 @@ public class UploadServlet extends HttpServlet {
             iter = items.iterator();
             out.println("<pre>File: ");
             out.println(filename);
+            if (delete && contents == null) {
+                out.println(" deleted");
+            }
             out.println("</pre><br/>");
             out.println("<pre>");
             out.println(contents);

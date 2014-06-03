@@ -24,5 +24,23 @@ Select a file to upload:
 	<input type="submit" value="Upload File" />
 </form>
 
+<form action="upload" method="post" enctype="multipart/form-data">
+	<h3>Enter name: </h3><input type="text/ascii" name="filename" size="50" />
+	<br/><p/>
+	<input type="submit" value="Show File" />
+</form>
+
+<form action="upload" method="post" enctype="multipart/form-data">
+	<input type="text/ascii" name="readonly" size="50" />
+	<br/><p/>
+	<input type="submit" value="List All" />
+</form>
+
+<form action="upload" method="post" enctype="multipart/form-data">
+	<input type="text/ascii" name="delete" size="50" />
+	<br/><p/>
+	<input type="submit" value="List All" />
+</form>
+
 </body>
 </html>
