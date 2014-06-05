@@ -196,13 +196,13 @@ public class UploadServlet extends HttpServlet {
                         out.println("No files found!");
                     } else {
                         for (String key : keys) {
-                            out.println(key);
+                            out.print(key);
                             FileSet set = filedata.get(key);
                             if (set != null) {
                                 out.print(" ");
                                 out.println(set.size());
                             } else {
-                                out.println();
+                                out.println(" 0");
                             }
                         }
                     }
