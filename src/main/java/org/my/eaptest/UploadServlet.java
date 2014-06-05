@@ -84,6 +84,10 @@ public class UploadServlet extends HttpServlet {
                 }
             }
         }
+        public int size()
+        {
+            return files.size();
+        }
     }
     private static ConcurrentHashMap<String, FileSet> filedata = new ConcurrentHashMap();
 
@@ -193,6 +197,13 @@ public class UploadServlet extends HttpServlet {
                     } else {
                         for (String key : keys) {
                             out.println(key);
+                            FileSet set = filedata.get(key);
+                            if (set != null) {
+                                out.print(" ");
+                                out.println(set.size());
+                            } else {
+                                out.println();
+                            }
                         }
                     }
                     out.println("</pre>");
