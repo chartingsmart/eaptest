@@ -62,7 +62,7 @@
       <file leaf-file-name="UploadServlet.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="202" column="0" selection-start="8001" selection-end="8001" vertical-scroll-proportion="0.60966545">
+            <state line="77" column="32" selection-start="2585" selection-end="2585" vertical-scroll-proportion="0.6282528">
               <folding />
             </state>
           </provider>
@@ -768,7 +768,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/my/eaptest/UploadServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="202" column="0" selection-start="8001" selection-end="8001" vertical-scroll-proportion="0.60966545">
+        <state line="77" column="32" selection-start="2585" selection-end="2585" vertical-scroll-proportion="0.6282528">
           <folding />
         </state>
       </provider>

@@ -58,16 +58,14 @@ public class UploadServlet extends HttpServlet {
     {
         final public static int MAX_FILES=10;
         ArrayList<String> files;
-        int length;
         FileSet()
         {
             files = new ArrayList<String>(MAX_FILES);
-            length = 0;
         }
         public String add(String file)
         {
             synchronized (files) {
-                if (length == MAX_FILES) {
+                if (files.size() == MAX_FILES) {
                     files.remove(MAX_FILES - 1);
                 }
                 files.add(0, file);
@@ -77,7 +75,7 @@ public class UploadServlet extends HttpServlet {
         public String get()
         {
             synchronized (files) {
-                if (length == 0) {
+                if (files.size() == 0) {
                     return null;
                 } else {
                     return files.get(0);
