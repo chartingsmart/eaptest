@@ -33,7 +33,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Enumeration;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
@@ -49,7 +49,43 @@ public class UploadServlet extends HttpServlet {
     @Inject
     private Logger log;
 
-    private static ConcurrentHashMap<String, String> filedata = new ConcurrentHashMap();
+    /**
+     * auxiliary class which holds last N occurences of a given file
+     * ensuring that we keep hold of file contents for a reasonable
+     * amount of time and thereby forcing more stuff into the old gen
+     */
+    private static class FileSet
+    {
+        final public static int MAX_FILES=10;
+        ArrayList<String> files;
+        int length;
+        FileSet()
+        {
+            files = new ArrayList<String>(MAX_FILES);
+            length = 0;
+        }
+        public String add(String file)
+        {
+            synchronized (files) {
+                if (length == MAX_FILES) {
+                    files.remove(MAX_FILES - 1);
+                }
+                files.add(0, file);
+            }
+            return file;
+        }
+        public String get()
+        {
+            synchronized (files) {
+                if (length == 0) {
+                    return null;
+                } else {
+                    return files.get(0);
+                }
+            }
+        }
+    }
+    private static ConcurrentHashMap<String, FileSet> filedata = new ConcurrentHashMap();
 
     private static String fromStream(InputStream is) {
         Scanner s = new Scanner(is).useDelimiter("\\A");
@@ -175,16 +211,22 @@ public class UploadServlet extends HttpServlet {
             boolean noUpdate = (contents == null);
             if (noUpdate) {
                 if (delete) {
-                    contents = filedata.remove(filename);
+                    FileSet set = filedata.remove(filename);
+                    contents = (set != null ? set.get() : null);
                 } else {
-                    contents = filedata.get(filename);
+                    FileSet set = filedata.get(filename);
+                    contents = (set != null ? set.get() : null);
                 }
             } else {
-                contents = filedata.put(filename, contents);
+                FileSet set = new FileSet();
+                FileSet old = filedata.putIfAbsent(filename, set);
+                if (old != null) {
+                    set = old;
+                }
+                set.add(contents);
             }
 
             // now hand the contents back
-            iter = items.iterator();
             out.print("<pre>File: ");
             out.print(filename);
             boolean printContents = true;
