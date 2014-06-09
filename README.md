@@ -39,7 +39,7 @@ suitable for displaying in a web browser. The response may possibly
 contain embedded pre-formatted text displaying the contents of a
 previously uploaded file.
 
-HTTP POST requests are posted to URL http://server-host/upload.
+HTTP POST requests are posted to URL http://*server-host*/upload.
 Requests must employ the -F option to curl to attach form field names
 and values to the request. These field names and values configure the
 operations the server is required to perform in response to the
@@ -226,41 +226,43 @@ The default values are
     kill_cycle=-1
 
 The script starts by populating the servlet cache, uploading
-file_count copies of the data file under names data0, data1 ...
+*file_count* copies of the data file under names data0, data1 ...
 
-It then spawns thread_count threads which perform a sequence of list
+It then spawns *thread_count* threads which perform a sequence of list
 and upload commands on different files. Threads are skewed to start
 operating on different files in the file set. Thread 1 rotates through
 the files starting from data1, thread 2 starts from data2 and so on.
 
-update_cycle determines the ratio of list to upload operations. So,
+*update_cycle* determines the ratio of list to upload operations. So,
 for example, with the default setting, 10, a thread will perform 9
 list operations for the current file and then upload new contents on
 the 10th operation. It then moves on to the next file in the set to do
-9 more lists and an upload and so on. Each thread performs
-iteration_count operations in all before it terminates. So, for
-example, with file_count 200, iteration_count 2000 and update_count
-10, each thread will read every file 9 times and update each file
-once.
+9 more lists and an upload and so on.
 
-kill_cycle can be used to configure periodic purges of the cache. For
-example, if it is supplied as 500 and all the other arguments take
-their defaults then after a thread has performed 450 list operations
-and 50 upload operations on its first 50 files it will delete the
-whole cache, upload every single file and then continue for the next
-500 operations before performing another purge and so on. The default
-setting, -1, means that no purges are performed.
+Each thread performs *iteration_count* operations in all before it
+terminates. So, for example, with *file_count* 200, *iteration_count*
+2000 and *update_count* 10, each thread will read every one of the 200
+files 9 times and update each file once.
+
+*kill_cycle* can be used to configure periodic purges of the
+cache. For example, if *kill_cycle* is supplied as 500 and all the
+other arguments take their defaults then after a thread has performed
+450 list operations and 50 upload operations on its first 50 files it
+will delete the whole cache, upload every single file and then
+continue for the next 500 operations before performing another purge
+and so on. The default setting, -1, means that no purges are
+performed.
 
 When all threads have completed execution the test script shuts down
 the JBossEAP server collects the results from the test run. It logs
 output printed by the JBossEAP server during startup and prints wall
-clock times for execution of the initali upload and for execution of
+clock times for execution of the initiali upload and for execution of
 all child thread requests. Finally, it copies the ballon driver log
 file from the JBossEAP server to the local machine.
 
-Results are ouput to files located in subdirectory
+Results can be found in files located in subdirectory
 
-    results/YYYY-MM-DD-HH:MM:SS
+    results/*YYYY-MM-DD-HH:MM:SS*
 
 The output files appear as
 
@@ -270,16 +272,16 @@ The output files appear as
     paropt-setup
     . . .
 
-For each of the four cases the xxx-setup file lists the server startup
+For each of the four cases the *xxx*-setup file lists the server startup
 ouptut. It is retained just in case anything goes wrong during
 startup.
 
 
-The xxx-times file lists the values of the 5 script arguments and shows
+The *xxx*-times file lists the values of the 5 script arguments and shows
 the wallclock times for uploading the data files and for exercising
 the server.
 
-The xxx-stats file contains the contents of the balloon driver log
+The *xxx*-stats file contains the contents of the balloon driver log
 genertaed during the test run. This includes formatted reports of the
 state of the server heap when selected young and old GCs occur. This
 includes:
@@ -295,7 +297,8 @@ includes:
 
 
     
-Acknowledgements ----------------
+Acknowledgements
+----------------
 
 Thanks to Eric Schabell for providing a previous JBossEAP app from
 which this one was cloned.
