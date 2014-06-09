@@ -1,0 +1,1 @@
+-XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -XX:MinHeapFreeRatio=20 -XX:MaxHeapFreeRatio=40 -Xms40m -Xbootclasspath/a:${HOME}/app-root/data/balloon/target/balloondriver-1.0.0.jar -agentpath:${HOME}/app-root/data/balloon/target/libballoon.so=approot
