@@ -8,7 +8,7 @@
 #   using thread_count parallel threads
 #     lists a file iteration_count times
 #     re-uploads single file content every update_cycle steps
-#     re-uploads all files every kill_cycle steps (optional)
+#     re-uploads current file every kill_cycle steps (optional)
 #
 # file_count default == $FILE_COUNT_DEFAULT
 # thread_count default == $THREAD_COUNT_DEFAULT
@@ -20,7 +20,7 @@ FILE_COUNT_DEFAULT=200
 THREAD_COUNT_DEFAULT=200
 ITERATION_COUNT_DEFAULT=2000
 UPDATE_CYCLE_DEFAULT=10
-KILL_CYCLE_DEFAULT=100
+KILL_CYCLE_DEFAULT=0
 
 # the name of the server to use and the user id of the owner
 # these are used to ssh into the server
@@ -115,24 +115,31 @@ function exercise_server_sub
 
     # do max operations
     while [ $i -lt $max ]; do
+        # we increment the cycle counters here
+        # but keep the current loop and file indices
         j=j+1
+        l=l+1
+        # delete old versions every kill cycle steps
+        if [ $l -eq $kill_cycle ]; then
+            # get rid of all versions
+            delete data$k
+            # and restart kill cycle
+            l=0
+        fi
         # do an update 1 in every cycle steps
         if [ $j -eq $update_cycle ]; then
             j=0
             upload data$k data
-            # use a different file next time round the cycle
-            k=k+1
-            if [ $k -eq $count ]; then
-                k=0
-            fi
         else
             list data$k
         fi
-        i=i+1
-        if [ $i -eq $kill_cycle ]; then
-            delete_all_files
-            upload_all_files
+        # move on to the next file
+        k=k+1
+        if [ $k -eq $count ]; then
+            k=0
         fi
+        # iterate
+        i=i+1
     done
 }
 
@@ -212,7 +219,7 @@ function usage()
     echo "      using thread_count parallel threads"
     echo "        lists a file iteration_count times"
     echo "        re-uploads single file content every update_cycle steps"
-    echo "        re-uploads all files every kill_cycle steps (optional)"
+    echo "        kills all versions of current file every kill_cycle steps (optional)"
     echo ""
     echo "    file_count default == $FILE_COUNT_DEFAULT"
     echo "    thread_count default == $THREAD_COUNT_DEFAULT"
@@ -234,10 +241,8 @@ function main()
         exit 1
     fi
 
-    if [ $# -eq 4 ]; then
+    if [ $# -eq 5 ]; then
         kill_cycle=$5
-    else
-        kill_cycle=0
     fi
 
     if [ $# -ge 4 ]; then
